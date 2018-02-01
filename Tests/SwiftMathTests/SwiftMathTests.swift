@@ -2,15 +2,14 @@ import XCTest
 @testable import SwiftMath
 
 class SwiftMathTests: XCTestCase {
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct
-        // results.
-        XCTAssertEqual(SwiftMath().text, "Hello, World!")
+    func testGcd() {
+        XCTAssertEqual(gcd(13, 13), 13)
+        XCTAssertEqual(gcd(37, 600), 1)
+        XCTAssertEqual(gcd(20, 100), 20)
+        XCTAssertEqual(gcd(624129, 2061517), 18913)
     }
 
-
     static var allTests = [
-        ("testExample", testExample),
+        ("testGcd", testGcd),
     ]
 }
